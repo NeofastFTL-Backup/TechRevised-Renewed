@@ -34,6 +34,10 @@
              () -> new SlabBlock(BlockBehaviour.Properties.of()
                      .strength(9f).requiresCorrectToolForDrops()));
 
+     public static final RegistryObject<Block> FAN_BLOCK = registerBlock("fan_block",
+             () -> new Block(BlockBehaviour.Properties.of()
+                     .strength(9f).requiresCorrectToolForDrops()));
+
      public static final RegistryObject<Block> HDD_27KB_BLOCK = registerBlock("hdd_27kb",
              () -> new HDD_27KB(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
      public static final RegistryObject<Block> COMP_CONTROLLER_BLOCK = registerBlock("comp_controller",

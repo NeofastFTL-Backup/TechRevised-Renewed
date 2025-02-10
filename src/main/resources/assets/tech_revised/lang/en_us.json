@@ -14,5 +14,8 @@
     "item.tech_revised.transistor_2": "Transistor (Advanced)",
     "item.tech_revised.dielectric_substance": "Dielectric Substance",
     "block.tech_revised.compressed_silicon": "Block of Compressed Silicon",
-    "creativetab.tech_revised": "Technology Revised"
+    "block.tech_revised.fan_block": "Fan Cooler",
+    "block.tech_revised.comp_controller": "Computer Controller",
+    "creativetab.tech_revised": "Technology Revised",
+    "gui.tech_revised.inventory.comp_controller": "Computer"
 }

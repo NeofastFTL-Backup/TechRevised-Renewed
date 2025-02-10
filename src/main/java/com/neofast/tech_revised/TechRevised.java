@@ -76,6 +76,7 @@ public class TechRevised
             event.accept(ModItems.TRANSISTOR_2);
 
             event.accept(ModBlocks.COMPRESSED_SILICON);
+            event.accept(ModBlocks.FAN_BLOCK);
             event.accept(ModBlocks.HDD_27KB_BLOCK);
 
             event.accept(ModBlocks.IRON_BLOCK_SLAB);

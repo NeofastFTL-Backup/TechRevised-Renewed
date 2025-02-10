@@ -1,8 +1,8 @@
 
 package com.neofast.tech_revised.block.custom.mbs;
 
-import com.neofast.tech_revised.block.entity.custom.HDD_27KB_BlockEntity;
 import net.minecraft.world.phys.BlockHitResult;
+import com.neofast.tech_revised.block.custom.mbs.BlocksCheckerProcedure;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
