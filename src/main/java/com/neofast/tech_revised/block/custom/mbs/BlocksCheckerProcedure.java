@@ -82,7 +82,7 @@ public class BlocksCheckerProcedure {
                 && (world.getBlockState(BlockPos.containing
                 (x - 1, y + 1, z + 1))).getBlock() == frame.getBlock() //Left Down Corner
 
-                && (world.getBlockState(BlockPos.containing(x + 1, y + 1, z + 1))) //
+                && (world.getBlockState(BlockPos.containing(x + 1, y + 1, z + 1))) //Right Down Corner
                 .getBlock() == frame.getBlock()
 
                 && (world.getBlockState(BlockPos.containing
