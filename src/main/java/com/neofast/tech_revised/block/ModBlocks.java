@@ -2,6 +2,7 @@
 
  import com.neofast.tech_revised.TechRevised;
  import com.neofast.tech_revised.block.custom.HDD_27KB;
+ import com.neofast.tech_revised.block.custom.mbs.CompController;
  import com.neofast.tech_revised.item.ModItems;
  import net.minecraft.network.chat.Component;
  import net.minecraft.world.item.*;
@@ -35,6 +36,8 @@
 
      public static final RegistryObject<Block> HDD_27KB_BLOCK = registerBlock("hdd_27kb",
              () -> new HDD_27KB(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+     public static final RegistryObject<Block> COMP_CONTROLLER_BLOCK = registerBlock("comp_controller",
+             CompController::new);
 
      private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
          return BLOCKS.register(name, block);

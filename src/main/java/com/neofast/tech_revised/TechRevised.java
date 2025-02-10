@@ -1,6 +1,8 @@
 package com.neofast.tech_revised;
 
 import com.neofast.tech_revised.block.ModBlocks;
+import com.neofast.tech_revised.block.custom.mbs.InventoryScreen;
+import com.neofast.tech_revised.block.custom.mbs.MultiBlockMachineModMenus;
 import com.neofast.tech_revised.block.entity.ModBlockEntities;
 import com.neofast.tech_revised.item.ModCreativeModTabs;
 import com.neofast.tech_revised.item.ModItems;
@@ -36,6 +38,7 @@ public class TechRevised
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        MultiBlockMachineModMenus.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
 
         modEventBus.addListener(this::setup);
@@ -49,6 +52,9 @@ public class TechRevised
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.HDD_27KB_BLOCK.get(), RenderType.translucent());
 
         MenuScreens.register(ModMenuTypes.HDD_27KB_MENU.get(), HDD_27KB_Screen::new);
+
+        MenuScreens.register(MultiBlockMachineModMenus.INVENTORY.get(), InventoryScreen::new);
+
 
         //Transistors Workbench (Basic)
 
@@ -75,6 +81,7 @@ public class TechRevised
             event.accept(ModBlocks.IRON_BLOCK_SLAB);
 
             event.accept(ModBlocks.MACHINE_FRAME_0);
+            event.accept(ModBlocks.COMP_CONTROLLER_BLOCK);
         }
     }
 
