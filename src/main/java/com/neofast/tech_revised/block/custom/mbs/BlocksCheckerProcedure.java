@@ -14,59 +14,98 @@ public class BlocksCheckerProcedure {
         BlockState interfaceBlock = Blocks.AIR.defaultBlockState();
         BlockState middleLineBlock = Blocks.AIR.defaultBlockState();
         BlockState crossBlockMiddleLayer = Blocks.AIR.defaultBlockState();
+        BlockState motherboardBlock = Blocks.AIR.defaultBlockState();
         frame = Blocks.IRON_BLOCK.defaultBlockState();
         interfaceBlock = ModBlocks.COMP_CONTROLLER_BLOCK.get().defaultBlockState();
         middleLineBlock = Blocks.REDSTONE_BLOCK.defaultBlockState();
+        motherboardBlock = Blocks.AMETHYST_BLOCK.defaultBlockState();
         crossBlockMiddleLayer = Blocks.NETHERITE_BLOCK.defaultBlockState();
 
         //Bottom
-        if   ((world.getBlockState(BlockPos.containing(x - 1, y - 1, z - 1)))
-                .getBlock() == frame.getBlock() && (world.getBlockState(BlockPos.containing
-                (x + 1, y - 1, z - 1))).getBlock() == frame.getBlock()
 
-                && (world.getBlockState(BlockPos.containing(x - 1, y - 1, z + 1)))
-                .getBlock() == frame.getBlock() && (world.getBlockState(BlockPos.containing
-                (x, y - 1, z))).getBlock() == frame.getBlock()
+        //Frame
+        if   ((world.getBlockState(BlockPos.containing(x - 1, y - 1, z - 1)))  //Left Up Corner
+                .getBlock() == frame.getBlock()
 
-                && (world.getBlockState(BlockPos.containing(x + 1, y - 1, z)))
-                .getBlock() == middleLineBlock.getBlock() && (world.getBlockState(BlockPos.containing
-                (x - 1, y - 1, z))).getBlock() == middleLineBlock.getBlock()
+                && (world.getBlockState(BlockPos.containing
+                (x + 1, y - 1, z - 1))).getBlock() == frame.getBlock() //Right Up Corner
 
-                && (world.getBlockState(BlockPos.containing(x, y - 1, z + 1)))
-                .getBlock() == middleLineBlock.getBlock() && (world.getBlockState(BlockPos.containing
-                (x, y - 1, z - 1))).getBlock() == middleLineBlock.getBlock()
+                && (world.getBlockState(BlockPos.containing(x - 1, y - 1, z + 1))) //Left Down Corner
+                .getBlock() == frame.getBlock()
+
+                && (world.getBlockState(BlockPos.containing(x + 1, y - 1, z + 1))) //Right Down Corner
+                .getBlock() == frame.getBlock()
+
+                && (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == frame.getBlock() //Middle
+
+
+                //Middle Line
+                && (world.getBlockState(BlockPos.containing
+                (x, y - 1, z - 1))).getBlock() == middleLineBlock.getBlock() //Up
+
+                && (world.getBlockState(BlockPos.containing(x, y - 1, z + 1)))  //Down
+                .getBlock() == middleLineBlock.getBlock()
+
+                && (world.getBlockState(BlockPos.containing
+                (x - 1, y - 1, z))).getBlock() == middleLineBlock.getBlock() //Left
+
+                && (world.getBlockState(BlockPos.containing(x + 1, y - 1, z))) //Right
+                .getBlock() == middleLineBlock.getBlock()
+
 
 
                 //Middle
-                && (world.getBlockState(BlockPos.containing(x + 1, y, z + 1)))
-                .getBlock() == frame.getBlock() && (world.getBlockState(BlockPos.containing
-                (x - 1, y, z - 1))).getBlock() == frame.getBlock()
 
-                && (world.getBlockState(BlockPos.containing(x + 1, y, z - 1)))
-                .getBlock() == frame.getBlock() && (world.getBlockState(BlockPos.containing
-                (x - 1, y, z + 1))).getBlock() == frame.getBlock()
+                //Frame
+                && (world.getBlockState(BlockPos.containing
+                (x - 1, y, z - 1))).getBlock() == frame.getBlock() //Left Up Corner
+
+                && (world.getBlockState(BlockPos.containing(x + 1, y, z - 1))) //Right Up Corner
+                .getBlock() == frame.getBlock()
+
+                && (world.getBlockState(BlockPos.containing
+                (x - 1, y, z + 1))).getBlock() == frame.getBlock() //Left Down Corner
+
+                && (world.getBlockState(BlockPos.containing(x + 1, y, z + 1))) //Right Down Corner
+                .getBlock() == frame.getBlock()
 
 
                 //Top
-                && (world.getBlockState(BlockPos.containing(x + 1, y + 1, z - 1)))
-                .getBlock() == frame.getBlock() && (world.getBlockState(BlockPos.containing
-                (x - 1, y + 1, z + 1))).getBlock() == frame.getBlock()
 
-                && (world.getBlockState(BlockPos.containing(x + 1, y + 1, z + 1)))
-                .getBlock() == frame.getBlock() && (world.getBlockState(BlockPos.containing
+                //Frame
+                && (world.getBlockState(BlockPos.containing(x + 1, y + 1, z - 1))) //Right Up Corner
+                .getBlock() == frame.getBlock()
+
+                && (world.getBlockState(BlockPos.containing(x, y + 1, z))) //Middle
+                .getBlock() == frame.getBlock()
+
+                && (world.getBlockState(BlockPos.containing
+                (x - 1, y + 1, z + 1))).getBlock() == frame.getBlock() //Left Down Corner
+
+                && (world.getBlockState(BlockPos.containing(x + 1, y + 1, z + 1))) //
+                .getBlock() == frame.getBlock()
+
+                && (world.getBlockState(BlockPos.containing
                 (x - 1, y + 1, z - 1))).getBlock() == frame.getBlock()
 
-                && (world.getBlockState(BlockPos.containing(x, y + 1, z - 1)))
-                .getBlock() == middleLineBlock.getBlock() && (world.getBlockState(BlockPos.containing
+                && (world.getBlockState(BlockPos.containing
                 (x + 1, y - 1, z + 1))).getBlock() == frame.getBlock()
 
-                && (world.getBlockState(BlockPos.containing(x, y + 1, z)))
-                .getBlock() == frame.getBlock() && (world.getBlockState(BlockPos.containing
+
+                //Middle Line
+
+                && (world.getBlockState(BlockPos.containing
                 (x + 1, y + 1, z))).getBlock() == middleLineBlock.getBlock()
 
+                && (world.getBlockState(BlockPos.containing(x, y + 1, z - 1)))
+                .getBlock() == middleLineBlock.getBlock()
+
                 && (world.getBlockState(BlockPos.containing(x - 1, y + 1, z)))
-                .getBlock() == middleLineBlock.getBlock() && (world.getBlockState(BlockPos.containing
+                .getBlock() == middleLineBlock.getBlock()
+
+                && (world.getBlockState(BlockPos.containing
                 (x, y + 1, z + 1))).getBlock() == middleLineBlock.getBlock()) {
+
 
 
             //Middle Layer (Interface)
