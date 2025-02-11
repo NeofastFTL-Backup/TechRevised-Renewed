@@ -35,6 +35,7 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModBlocks.COMPRESSED_SILICON.get());
                         pOutput.accept(ModBlocks.FAN_BLOCK.get());
+                        pOutput.accept(ModBlocks.MOUSE.get());
                         pOutput.accept(ModBlocks.HDD_27KB_BLOCK.get());
                         pOutput.accept(ModBlocks.COMP_CONTROLLER_BLOCK.get());
 

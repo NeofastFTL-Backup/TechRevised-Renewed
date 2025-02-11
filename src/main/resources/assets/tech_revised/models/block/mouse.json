@@ -1,0 +1,75 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "block/mouse_buttons",
+		"1": "bottom",
+		"2": "top",
+		"particle": "block/mouse_buttons"
+	},
+	"elements": [
+		{
+			"name": "bottom",
+			"from": [7, 0, 0],
+			"to": [9, 0.25, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 0]},
+			"faces": {
+				"north": {"uv": [4, 1, 6, 2], "texture": "#1"},
+				"east": {"uv": [0, 4, 4, 5], "texture": "#1"},
+				"south": {"uv": [4, 2, 6, 3], "texture": "#1"},
+				"west": {"uv": [4, 0, 8, 1], "texture": "#1"},
+				"up": {"uv": [2, 4, 0, 0], "texture": "#1"},
+				"down": {"uv": [4, 0, 2, 4], "texture": "#1"}
+			}
+		},
+		{
+			"from": [8, 0.25, 0],
+			"to": [9, 0.75, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.25, 0]},
+			"faces": {
+				"north": {"uv": [2, 3, 3, 4], "texture": "#0"},
+				"east": {"uv": [0, 0, 2, 1], "texture": "#0"},
+				"south": {"uv": [3, 3, 4, 4], "texture": "#0"},
+				"west": {"uv": [0, 1, 2, 2], "texture": "#0"},
+				"up": {"uv": [1, 4, 0, 2], "texture": "#0"},
+				"down": {"uv": [3, 0, 2, 2], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 0.25, 0],
+			"to": [8, 0.75, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0.25, 0]},
+			"faces": {
+				"north": {"uv": [0, 4, 1, 5], "texture": "#0"},
+				"east": {"uv": [1, 2, 3, 3], "texture": "#0"},
+				"south": {"uv": [4, 1, 5, 2], "texture": "#0"},
+				"west": {"uv": [3, 0, 5, 1], "texture": "#0"},
+				"up": {"uv": [2, 5, 1, 3], "texture": "#0"},
+				"down": {"uv": [4, 1, 3, 3], "texture": "#0"}
+			}
+		},
+		{
+			"name": "top",
+			"from": [7, 0.25, 2],
+			"to": [9, 1, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0.25, 2]},
+			"faces": {
+				"north": {"uv": [2, 0, 4, 1], "texture": "#2"},
+				"east": {"uv": [2, 1, 4, 2], "texture": "#2"},
+				"south": {"uv": [2, 2, 4, 3], "texture": "#2"},
+				"west": {"uv": [2, 3, 4, 4], "texture": "#2"},
+				"up": {"uv": [2, 2, 0, 0], "texture": "#2"},
+				"down": {"uv": [2, 2, 0, 4], "texture": "#2"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		{
+			"name": "mouse_buttons",
+			"origin": [7, 1, 0],
+			"color": 0,
+			"children": [1, 2]
+		},
+		3
+	]
+}
