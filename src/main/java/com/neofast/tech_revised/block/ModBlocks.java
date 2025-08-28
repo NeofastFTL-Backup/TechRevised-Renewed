@@ -2,7 +2,7 @@
 
  import com.neofast.tech_revised.TechRevised;
  import com.neofast.tech_revised.block.custom.HDD_27KB;
- import com.neofast.tech_revised.block.custom.mbs.CompController;
+ import com.neofast.tech_revised.block.custom.WorkbenchT1;
  import com.neofast.tech_revised.item.ModItems;
  import net.minecraft.network.chat.Component;
  import net.minecraft.world.item.*;
@@ -34,18 +34,11 @@
              () -> new SlabBlock(BlockBehaviour.Properties.of()
                      .strength(9f).requiresCorrectToolForDrops()));
 
-     public static final RegistryObject<Block> FAN_BLOCK = registerBlock("fan_block",
-             () -> new Block(BlockBehaviour.Properties.of()
-                     .strength(9f).requiresCorrectToolForDrops()));
-
-     public static final RegistryObject<Block> MOUSE = registerBlock("mouse",
-             () -> new Block(BlockBehaviour.Properties.of()
-                     .strength(9f).requiresCorrectToolForDrops()));
-
      public static final RegistryObject<Block> HDD_27KB_BLOCK = registerBlock("hdd_27kb",
              () -> new HDD_27KB(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
-     public static final RegistryObject<Block> COMP_CONTROLLER_BLOCK = registerBlock("comp_controller",
-             CompController::new);
+
+     public static final RegistryObject<Block> WORKBENCH_T1 = registerBlock("workbench_t1",
+             () -> new WorkbenchT1(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
      private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
          return BLOCKS.register(name, block);

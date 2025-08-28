@@ -20,10 +20,10 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(HDD_27KB_BlockEntity::new,
                             ModBlocks.HDD_27KB_BLOCK.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<CompControllerBlockEntity>> COMP_CONTROLLER_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("comp_controller", () ->
-                    BlockEntityType.Builder.of(CompControllerBlockEntity::new,
-                            ModBlocks.COMP_CONTROLLER_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<HDD_27KB_BlockEntity>> WORKBENCH_T1_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("hdd_27kb", () ->
+                    BlockEntityType.Builder.of(HDD_27KB_BlockEntity::new,
+                            ModBlocks.HDD_27KB_BLOCK.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {
